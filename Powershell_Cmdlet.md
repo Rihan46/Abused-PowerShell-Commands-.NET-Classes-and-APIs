@@ -19,7 +19,7 @@
 | **`Get-EventSubscriber`**| Retrieves event subscribers.                                        | `Get-EventSubscriber`                                                     |
 | **`New-PSDrive`**        | Creates a new PowerShell drive.                                    | `New-PSDrive -Name "RemoteDrive" -PSProvider FileSystem -Root "\\remote\share"` |
 | **`Get-CimInstance`**    | Retrieves CIM (Common Information Model) instances.                 | `Get-CimInstance -ClassName Win32_OperatingSystem`                        |
-| **`Get-ADUser`**        | Retrieves Active Directory user accounts.                           | `Get-ADUser -Filter * | Select-Object -Property Name,SamAccountName`      |
+| **`Get-ADUser`**        | Retrieves Active Directory user accounts.                           | `Get-ADUser -Filter * \| Select-Object -Property Name,SamAccountName`      |
 | **`Get-WmiObject`**    | Retrieves management information from WMI (Windows Management Instrumentation). | `Get-WmiObject -Class Win32_ComputerSystem`                              |
 | **`New-ScheduledTask`** | Creates a new scheduled task.                                      | `New-ScheduledTask -Action (New-ScheduledTaskAction -Execute "C:\path\to\malicious.exe") -Trigger (New-ScheduledTaskTrigger -Daily -At 3am)` |
 
