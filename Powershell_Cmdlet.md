@@ -10,12 +10,12 @@
 | **`Get-Content`**        | Retrieves the content of a file or other item.                      | `Get-Content "C:\path\to\malicious.ps1" | Invoke-Expression`              |
 | **`Set-ExecutionPolicy`**| Changes the user preference for the PowerShell script execution policy. | `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`    |
 | **`Add-Type`**           | Adds a .NET Framework type to a PowerShell session.                  | `Add-Type -TypeDefinition $typeDefinition`                               |
-| **`Get-Process`**        | Retrieves a list of processes running on the local machine.        | `Get-Process | Where-Object { $_.Name -eq "targetProcess" }`                 |
+| **`Get-Process`**        | Retrieves a list of processes running on the local machine.        | `Get-Process \| Where-Object { $_.Name -eq "targetProcess" }`                 |
 | **`Stop-Process`**      | Stops a running process.                                            | `Stop-Process -Name "maliciousProcess"`                                   |
 | **`Remove-Item`**        | Deletes files or folders.                                           | `Remove-Item -Path "C:\path\to\file.txt" -Recurse -Force`                 |
 | **`Set-MpPreference`**   | Configures Windows Defender preferences.                           | `Set-MpPreference -DisableRealtimeMonitoring $true`                       |
 | **`Get-EventLog`**      | Retrieves entries from event logs.                                  | `Get-EventLog -LogName Security -Newest 10`                              |
-| **`Export-Csv`**         | Exports data to a CSV file.                                         | `Get-Process | Export-Csv -Path "C:\path\to\processes.csv"`                  |
+| **`Export-Csv`**         | Exports data to a CSV file.                                         | `Get-Process \| Export-Csv -Path "C:\path\to\processes.csv"`                  |
 | **`Get-EventSubscriber`**| Retrieves event subscribers.                                        | `Get-EventSubscriber`                                                     |
 | **`New-PSDrive`**        | Creates a new PowerShell drive.                                    | `New-PSDrive -Name "RemoteDrive" -PSProvider FileSystem -Root "\\remote\share"` |
 | **`Get-CimInstance`**    | Retrieves CIM (Common Information Model) instances.                 | `Get-CimInstance -ClassName Win32_OperatingSystem`                        |
